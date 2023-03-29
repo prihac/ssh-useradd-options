@@ -2,7 +2,7 @@
 
 # Get username from user
 read -p "Enter username: " username
-
+echo
 # Get password from user
 read -p "Enter password: " -s password
 echo
