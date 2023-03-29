@@ -4,7 +4,7 @@
 read -p "Enter username: " username
 
 # Get password from user
-read -s -p "Enter password: " password
+read -p "Enter password: " -s password
 echo
 
 # Get expiration date from user
@@ -15,4 +15,4 @@ expiration_date=$(date -d "+${expiration_days} days" +%Y-%m-%d)
 read -p "Enter number of allowed logins: " max_logins
 
 # Create user with specified options
-useradd -e "${expiration_date}" -f "${expiration_days}" -m -U -s /bin/bash -p "$(openssl passwd -1 "${password}")" -l "${max_logins}" -c "" -o -u 0 "${username}"
+useradd -e "${expiration_date}" -f "${expiration_days}" -p "$(openssl passwd -1 "${password}")" -l "${max_logins}" -c "" -o -u 0 "${username}"
