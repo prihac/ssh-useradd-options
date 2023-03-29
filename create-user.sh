@@ -15,7 +15,6 @@ expiration_date=$(date -d "+${expiration_days} days" +%Y-%m-%d)
 read -p "Enter number of allowed logins: " max_logins
 
 # Create user with specified options
-#useradd -e "${expiration_date}" -f "${expiration_days}" -p "$(openssl passwd -1 "${password}")" -l "${username}"
 useradd -e "${expiration_date}" -f "${expiration_days}" -p "$(openssl passwd -1 "${password}")" -s /bin/false -M -N -r -l "${username}"
 
 # Get username from user
