@@ -11,4 +11,4 @@ deluser "${username}"
 read -p "Enter username: " username
 
 # Show User Info
-chage -l "${username}"
+cut -d: -f1 /etc/passwd 
