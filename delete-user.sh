@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# Show only the last ten users
+# Show only the last five users
 echo " ************ "
 echo " Show only the last ten users: "
-cut -d: -f1 /etc/passwd | tail -n 10
+cut -d: -f1 /etc/passwd | tail -n 5
 echo " ************ "
 
 # Get username from user
