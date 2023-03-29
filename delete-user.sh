@@ -13,9 +13,6 @@ echo
 # Delete user
 deluser "${username}"
 
-# Get username from user
-read -p "Enter username: " username
-
 # Show User Info
 echo " ************ "
 echo " Show only the last five users: "
