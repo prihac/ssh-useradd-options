@@ -7,5 +7,5 @@ rm -rf ssh-useradd-options
 if [ $? -eq 0 ]; then
     echo "Uninstall was successful!"
 else
-    echo "Update failed"
+    echo "Uninstall failed"
 fi
