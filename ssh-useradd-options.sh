@@ -1,5 +1,8 @@
 #!/bin/bash
 
+echo " ************ "
+echo " ************ "
+echo " ************ "
 # Show Options
 PS3='Please select your choice: '
 options=("Create User" "Delete User" "Quit")
@@ -20,3 +23,6 @@ do
         *) echo "Invalid option $REPLY";;
     esac
 done
+echo " ************ "
+echo " ************ "
+echo " ************ "
