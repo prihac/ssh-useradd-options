@@ -16,3 +16,9 @@ read -p "Enter number of allowed logins: " max_logins
 
 # Create user with specified options
 useradd -e "${expiration_date}" -f "${expiration_days}" -p "$(openssl passwd -1 "${password}")" -l "${username}"
+
+# Get username from user
+read -p "Enter username: " username
+
+# Show User Info
+chage -l "${username}"
