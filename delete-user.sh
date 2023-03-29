@@ -1,7 +1,8 @@
 #!/bin/bash
 
 # Show User Info
-cut -d: -f1 /etc/passwd | tail -n 5
+echo " Show only the last ten users: "
+cut -d: -f1 /etc/passwd | tail -n 10
 
 # Get username from user
 read -p "Enter username: " username
@@ -14,4 +15,5 @@ deluser "${username}"
 read -p "Enter username: " username
 
 # Show User Info
-cut -d: -f1 /etc/passwd 
+echo " Show only the last five users: "
+cut -d: -f1 /etc/passwd | tail -n 5
