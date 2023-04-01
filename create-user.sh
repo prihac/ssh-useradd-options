@@ -22,3 +22,5 @@ read -p "Enter username: " username
 
 # Show User Info
 chage -l "${username}"
+
+exit 0
