@@ -12,7 +12,7 @@ echo
 
 # Delete user
 deluser "${username}"
-echo -e "\e[91m ************ \e[0m"
+echo "\e[91m ************ \e[0m"
 
 # Show only the last five users
 echo " ************ "
