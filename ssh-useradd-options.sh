@@ -3,7 +3,7 @@
 echo " ************ "
 # Show Options
 PS3='Please select your choice: '
-options=("Create User" "Delete User" "Status User" "Update Script" "Uninstall Script" "Quit")
+options=("Create User" "Delete User" "Status User" "Online User" "Update Script" "Uninstall Script" "Quit")
 select opt in "${options[@]}"
 do
     case $opt in
@@ -18,7 +18,11 @@ do
         "Status User")
             # Run Status user script
             sh ssh-useradd-options/status-user.sh
-            ;;			
+            ;;		
+        "Online User")
+            # Run Status user script
+            sh ssh-useradd-options/online-user.sh
+            ;;				
 		"Update Script")
             # Run Update script
             sh ssh-useradd-options/update-script.sh
