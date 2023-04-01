@@ -9,3 +9,4 @@ if [ $? -eq 0 ]; then
 else
     echo "Uninstall failed"
 fi
+exit 0
