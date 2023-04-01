@@ -39,3 +39,4 @@ if [ $? -eq 0 ]; then
 else
     echo "Update failed"
 fi
+exit 0
