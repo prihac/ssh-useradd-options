@@ -1,7 +1,7 @@
 #!/bin/bash
 echo " ************ "
 # Get username from user
-read -p "Enter the username you want to delete: " username
+read -p "Enter the username you want to Check Information: " username
 echo
 echo " ************ "
 # Information user
