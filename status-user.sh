@@ -12,3 +12,4 @@ echo " ************ "
 # Information user
 chage -l "${username}"
 echo " ************ "
+exit 0
