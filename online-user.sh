@@ -2,5 +2,4 @@
 echo " ************ "
 # Online User
 sudo nethogs
-
 echo " ************ "
