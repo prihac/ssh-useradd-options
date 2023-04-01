@@ -4,7 +4,7 @@
 read -p "Enter username: " username
 echo
 # Get password from user
-read -p "Enter password: " -s password
+read -p "Enter password: " password
 echo
 
 # Get expiration date from user
