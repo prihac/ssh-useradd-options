@@ -1,9 +1,19 @@
 #!/bin/bash
 
+# Check accounts.txt available file
 if [ ! -f "accounts.txt" ]; then
   echo "Error: File 'accounts.txt' not found!"
   exit 1
 fi
+# Check accounts.txt correct file
+while IFS=: read -r username password; do
+  if [[ -z $username || -z $password ]]; then
+    echo "Error: Invalid format for line '$username:$password' in 'accounts.txt' file!"
+    exit 1
+  fi
+  ...
+done < accounts.txt
+
 
 # Define default password
 default_password="PriH@cssw0rdHac"
