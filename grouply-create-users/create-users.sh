@@ -5,6 +5,7 @@ if [ ! -f "accounts.txt" ]; then
   echo "Error: File 'accounts.txt' not found!"
   exit 1
 fi
+
 # Check accounts.txt correct file
 while IFS=: read -r username password; do
   if [[ -z $username || -z $password ]]; then
