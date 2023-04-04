@@ -1,7 +1,12 @@
 #!/bin/bash
 
+if [ ! -f "accounts.txt" ]; then
+  echo "Error: File 'accounts.txt' not found!"
+  exit 1
+fi
+
 # Define default password
-default_password="P@ssw0rd"
+default_password="PriH@cssw0rdHac"
 
 # Read accounts from file
 while read account; do
