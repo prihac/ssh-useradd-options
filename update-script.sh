@@ -10,7 +10,7 @@ backup_dir="backup_$today"
 backup_file="$backup_dir.tar.gz"
 
 # Main Folder
-main_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+main_dir="/root/ssh-useradd-options"
 
 # Make sure the user is used with sudo access
 if [ $(id -u) -ne 0 ]; then
