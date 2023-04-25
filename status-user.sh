@@ -2,7 +2,7 @@
 
 # Show only the last five users
 echo " ************ "
-echo " Show only the last five users: "
+echo " Show only the last 100 users: "
 cut -d: -f1 /etc/passwd | tail -n 100
 echo " ************ "
 # Get username from user
