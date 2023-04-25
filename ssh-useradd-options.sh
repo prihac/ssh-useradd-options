@@ -9,27 +9,27 @@ do
     case $opt in
         "Create User")
             # Run Create user script
-            sh ssh-useradd-options/create-user.sh
+            sh /root/ssh-useradd-options/create-user.sh
             ;;
         "Delete User")
             # Run Delete user script
-            sh ssh-useradd-options/delete-user.sh
+            sh /root/ssh-useradd-options/delete-user.sh
             ;;
         "Status User")
             # Run Status user script
-            sh ssh-useradd-options/status-user.sh
+            sh /root/ssh-useradd-options/status-user.sh
             ;;		
         "Online User")
             # Run Status user script
-            sh ssh-useradd-options/online-user.sh
+            sh /root/ssh-useradd-options/online-user.sh
             ;;				
 		"Update Script")
             # Run Update script
-            sh ssh-useradd-options/update-script.sh
+            sh /root/ssh-useradd-options/update-script.sh
             ;;	
 		"Uninstall Script")
             # Run Uninstall script
-            sh ssh-useradd-options/uninstall-script.sh
+            sh /root/ssh-useradd-options/uninstall-script.sh
             ;;
         "Quit")
             break
