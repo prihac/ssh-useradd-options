@@ -3,7 +3,7 @@
 echo " ************ "
 # Show Options
 PS3='Please select your choice: '
-options=("Create User" "Delete User" "Status User" "Online User" "Network Interface" "Update Script" "Uninstall Script" "Quit")
+options=("Create User" "Delete User" "Status User" "Online User" "Network Interface" "Network Bandwith" "Update Script" "Uninstall Script" "Quit")
 select opt in "${options[@]}"
 do
     case $opt in
@@ -25,6 +25,9 @@ do
             ;;				
 		"Network Interface")
 			sh /root/ssh-useradd-options/network_interface.sh
+            ;;		
+		"Network Bandwith")
+			sh /root/ssh-useradd-options/network_bandwith.sh
             ;;		
 		"Update Script")
             # Run Update script
