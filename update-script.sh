@@ -10,7 +10,7 @@ backup_dir="backup_$today"
 backup_file="$backup_dir.tar.gz"
 
 # Main Folder
-main_dir="/root/ssh-useradd-options"
+main_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 # Make sure the user is used with sudo access
 if [ $(id -u) -ne 0 ]; then
@@ -21,10 +21,6 @@ fi
 # Back up old directory
 echo "Creating backup of old directory..."
 tar -czvf $backup_file $main_dir
-
-# Delete old directory
-echo "Removing old directory..."
-rm -rf $main_dir
 
 # Update from GitHub
 echo "Cloning new version from Github..."
