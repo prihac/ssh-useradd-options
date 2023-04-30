@@ -23,7 +23,7 @@ chage -W 100 "${username}"
 # Show only the last ten users except system users
 echo "\e[91m ************ \e[0m"
 echo " Show only the last ten users except system users: "
-cut -d: -f1 /etc/passwd | grep -Ev "root|daemon|bin|sys|sync|games|man|lp|mail|news|uucp|proxy|www-data|backup|list|irc|gnats|nobody|_apt|systemd-network|systemd-resolve|messagebus|systemd-timesync|sshd" | tail -n 10
+cut -d: -f1 /etc/passwd | grep -Ev "root|daemon|bin|sys|sync|games|man|lp|mail|news|uucp|proxy|www-data|backup|list|irc|gnats|nobody|_apt|systemd-network|systemd-resolve|messagebus|systemd-timesync|sshd|stunnel4|privoxy" | tail -n 10
 echo "\e[91m ************ \e[0m"
 
 exit 0
