@@ -20,10 +20,10 @@ useradd -e "${expiration_date}" -f "${expiration_days}" -p "$(openssl passwd -1 
 # Modify warning days for password expiration to 100
 chage -W 100 "${username}"
 
-# Show only the last ten users
+# Show only the last ten users except system users
 echo "\e[91m ************ \e[0m"
-echo " Show only the last ten users: "
-cut -d: -f1 /etc/passwd | tail -n 10
+echo " Show only the last ten users except system users: "
+cut -d: -f1 /etc/passwd | grep -Ev "root|daemon|bin|sys|sync|games|man|lp|mail|news|uucp|proxy|www-data|backup|list|irc|gnats|nobody|_apt|systemd-network|systemd-resolve|messagebus|systemd-timesync|sshd" | tail -n 10
 echo "\e[91m ************ \e[0m"
 
 exit 0
