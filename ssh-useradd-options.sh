@@ -3,7 +3,7 @@
 echo " ************ "
 # Show Options
 PS3='Please select your choice: '
-options=("Create User" "Delete User" "Status User" "Online User" "Update Script" "Uninstall Script" "Quit")
+options=("Create User" "Delete User" "Status User" "Online User" "Update Script" "Uninstall Script" "Quit" "SSH Monitor")
 select opt in "${options[@]}"
 do
     case $opt in
@@ -39,6 +39,9 @@ do
             ;;
         "Quit")
             break
+		"SSH Monitor")
+            # Run Uninstall script
+            sh /root/ssh-useradd-options/ssh-monitor.sh
             ;;
         *) echo "Invalid option $REPLY";;
     esac
