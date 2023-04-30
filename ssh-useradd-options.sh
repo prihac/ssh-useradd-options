@@ -39,6 +39,7 @@ do
             ;;
         "Quit")
             break
+            ;;
 		"SSH Monitor")
             # Run Uninstall script
             sh /root/ssh-useradd-options/ssh-monitor.sh
