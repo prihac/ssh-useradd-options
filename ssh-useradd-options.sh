@@ -3,7 +3,7 @@
 echo " ************ "
 # Show Options
 PS3='Please select your choice: '
-options=("Create User" "Delete User" "Status User" "Online User" "Network Interface" "Network Bandwith" "Update Script" "Uninstall Script" "Quit")
+options=("Create User" "Delete User" "Status User" "Online User" "Update Script" "Uninstall Script" "Quit")
 select opt in "${options[@]}"
 do
     case $opt in
