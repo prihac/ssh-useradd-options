@@ -12,6 +12,7 @@ read -p "Enter the username you want to delete: " username
 echo
 
 # Delete user
+pkill -u "${username}"
 deluser "${username}"
 echo "\e[91m ************ \e[0m"
 
