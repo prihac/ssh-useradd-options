@@ -1,26 +1,41 @@
 #!/bin/bash
 
-# Get username from user
-read -p "Enter username: " username
-echo
-# Get password from user
-read -p "Enter password: " password
-echo
+# Read the username from user input
+read -p "Please enter the username you want to extend: " username
 
-# Get expiration date from user
-read -p "Enter number of days until account expiration: " expiration_days
-expiration_date=$(date -d "+${expiration_days} days" +%Y-%m-%d)
+# Read the expiration duration from user input
+echo "Please select the expiration duration:"
+echo "1) 1 Month"
+echo "2) 3 Months"
+echo "3) 6 Months"
+echo "4) Custom Day"
+read -p "Enter your choice (enter the option number): " choice
 
-# Get number of allowed logins from user
-read -p "Enter number of allowed logins: " max_logins
+case $choice in
+  1)
+    duration="+1 month"
+    ;;
+  2)
+    duration="+3 months"
+    ;;
+  3)
+    duration="+6 months"
+    ;;
+  4)
+    read -p "Please enter the number of days you want to extend: " custom_days
+    duration="+$custom_days days"
+    ;;
+  *)
+    echo "Invalid option. Exiting the script."
+    exit 1
+    ;;
+esac
 
-# Create user with specified options
-useradd -e "${expiration_date}" -f "${expiration_days}" -p "$(openssl passwd -1 "${password}")" -s /bin/false -M -N -l "${username}"
+# Set the account expiration date
+expiration_date=$(date -d "$duration" +%Y-%m-%d)
+chage -E "$expiration_date" -W 1 "$username"
 
-# Show only the last five users
-echo "\e[91m ************ \e[0m"
-echo " Show only the last five users: "
-cut -d: -f1 /etc/passwd | tail -n 10
-echo "\e[91m ************ \e[0m"
-
-exit 0
+# Display the success message
+echo "Account $username has been successfully extended."
+echo "Account details:"
+chage -l "$username"
