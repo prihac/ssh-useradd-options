@@ -15,7 +15,6 @@ while IFS=: read -r username password; do
   ...
 done < accounts.txt
 
-
 # Define default password
 default_password="PriH@cssw0rdHac"
 
@@ -39,6 +38,9 @@ while read account; do
 
     # Set password
     echo "$username:$password" | chpasswd
+
+    # Set password expiration warning
+    chage -W 100 "$username"
 
     echo "User $username created with password $password"
   fi
