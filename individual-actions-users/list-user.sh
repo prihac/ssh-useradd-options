@@ -1,4 +1,4 @@
-#!/root/ssh-useradd-options/individual-actions-users
+#!/bin/bash
 
 
 if [ -f /etc/debian_version ]; then
@@ -23,7 +23,7 @@ do
         ACCOUNT="$(echo $checklist | cut -d: -f1)"
         ID="$(echo $checklist | grep -v nobody | cut -d: -f3)"
         exp="$(chage -l $ACCOUNT | grep "Account expires" | awk -F": " '{print $2}')"
-        if [[ $ID -ge $UIDN ]]; then
+        if [ $ID -ge $UIDN ]; then
         printf "%-17s %2s\n" "$ACCOUNT" "$exp"
         fi
 done < /etc/passwd
