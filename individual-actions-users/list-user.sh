@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/root/ssh-useradd-options/individual-actions-users
 
 
 if [ -f /etc/debian_version ]; then
