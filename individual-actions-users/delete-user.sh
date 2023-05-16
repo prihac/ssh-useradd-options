@@ -15,9 +15,5 @@ echo
 deluser "${username}"
 echo "\e[91m ************ \e[0m"
 
-# Show only the last five users
-echo " ************ "
-echo " Show only the last five users: "
-cut -d: -f1 /etc/passwd | tail -n 5
 echo " ************ "
 exit 0
