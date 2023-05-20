@@ -21,7 +21,7 @@ useradd -e "${expiration_date}" -f "${expiration_days}" -p "$(openssl passwd -1 
 chage -W 100 "${username}"
 
 # Create or update device tracking file
-devices_file="/path/to/device_tracking.txt"
+devices_file="/root/ssh-useradd-options/device_tracking.txt"
 
 if [ ! -f "$devices_file" ]; then
   touch "$devices_file"
