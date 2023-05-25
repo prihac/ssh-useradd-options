@@ -30,6 +30,8 @@ if id "$username" >/dev/null 2>&1; then
         if [[ "$lock_user" == "y" ]]; then
             sudo passwd -l "$username"
             echo "User '$username' has been locked."
+			pkill -u "${username}"
+			echo "User '$username' has been was fired."
         else
             echo "Aborting locking of user."
             exit 1
