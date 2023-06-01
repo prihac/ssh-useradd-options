@@ -21,6 +21,9 @@ while read account; do
 
   # Check if user exists
   if id "$username" >/dev/null 2>&1; then
+    # Kill processes using the username
+    pkill -u "$username"
+    
     # Delete user
     userdel -r "$username"
 
