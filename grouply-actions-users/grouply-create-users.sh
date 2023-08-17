@@ -12,7 +12,6 @@ while IFS=: read -r username password; do
     echo "Error: Invalid format for line '$username:$password' in 'accounts-grouply-create.txt' file!"
     exit 1
   fi
-  ...
 done < accounts-grouply-create.txt
 
 # Define default password
